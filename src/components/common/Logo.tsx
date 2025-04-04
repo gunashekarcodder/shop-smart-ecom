@@ -14,25 +14,28 @@ const Logo: React.FC<LogoProps> = ({ size = 'medium' }) => {
     large: 'text-3xl',
   };
 
+  // Set logo dimensions based on size
+  const logoSize = {
+    small: 30,
+    medium: 40,
+    large: 50,
+  };
+
   return (
     <Link to="/" className={`font-bold ${sizeClasses[size]} flex items-center`}>
-      <div className="flex items-center">
-        <span className="text-gray-800">V</span>
-        <span className="text-gray-800 relative -top-1 -left-1">IBE</span>
-        <svg 
-          width={size === 'small' ? 24 : size === 'medium' ? 28 : 36} 
-          height={size === 'small' ? 24 : size === 'medium' ? 28 : 36} 
-          viewBox="0 0 100 100" 
-          className="ml-1"
-        >
-          <path 
-            d="M10 50 L40 80 L90 20" 
-            stroke="currentColor" 
-            strokeWidth="10" 
-            fill="none" 
-            className="text-gray-800" 
-          />
-        </svg>
+      <div className="flex items-center gap-2">
+        <div className="relative">
+          <div className="rounded-full bg-brand-primary flex items-center justify-center overflow-hidden">
+            <img 
+              src="/lovable-uploads/aab8ffe0-b88f-45da-834a-8598d01daeb1.png" 
+              alt="VIBE Logo" 
+              className="h-auto"
+              width={logoSize[size]}
+              height={logoSize[size]}
+            />
+          </div>
+        </div>
+        <span className="text-brand-primary uppercase tracking-wider">VIBE</span>
       </div>
     </Link>
   );

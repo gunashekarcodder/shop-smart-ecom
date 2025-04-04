@@ -53,11 +53,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom e-commerce colors
+				// Updated e-commerce colors to match logo
 				brand: {
-					primary: '#3B82F6',  // Vibrant blue
-					secondary: '#10B981', // Emerald green
-					accent: '#F59E0B',   // Amber
+					primary: '#144E33',  // Dark green from logo background
+					secondary: '#EAB990', // Peach/salmon color from logo illustration
+					accent: '#FFFFFF',   // White from VIBE text
 				},
 			},
 			borderRadius: {
