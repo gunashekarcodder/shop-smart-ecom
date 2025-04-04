@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -10,6 +10,9 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
+            <div className="inline-block bg-white/80 px-4 py-1 rounded-full text-brand-primary text-sm font-medium mb-6">
+              🎉 Summer sale is on! Get 25% off with code SUMMER25
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Shop Smart, <span className="text-brand-primary">Live Better</span>
             </h1>
@@ -19,15 +22,34 @@ const Hero = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/products">
-                <Button size="lg">
-                  Shop Now <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="group">
+                  Shop Now 
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
               <Link to="/categories">
                 <Button variant="outline" size="lg">
+                  <ShoppingBag className="mr-2 h-5 w-5" />
                   Browse Categories
                 </Button>
               </Link>
+            </div>
+            
+            <div className="flex items-center mt-10 space-x-8">
+              <div className="flex flex-col items-center">
+                <span className="font-bold text-2xl">10k+</span>
+                <span className="text-gray-500 text-sm">Products</span>
+              </div>
+              <div className="h-10 border-r border-gray-200"></div>
+              <div className="flex flex-col items-center">
+                <span className="font-bold text-2xl">5k+</span>
+                <span className="text-gray-500 text-sm">Happy Customers</span>
+              </div>
+              <div className="h-10 border-r border-gray-200"></div>
+              <div className="flex flex-col items-center">
+                <span className="font-bold text-2xl">99%</span>
+                <span className="text-gray-500 text-sm">Satisfaction</span>
+              </div>
             </div>
           </div>
           <div className="md:w-1/2 flex justify-center">
@@ -41,6 +63,28 @@ const Hero = () => {
                   alt="Shopping items"
                   className="rounded-xl shadow-2xl relative z-10 max-w-lg mx-auto"
                 />
+                
+                {/* Sale tag */}
+                <div className="absolute -right-5 top-5 bg-red-500 text-white py-2 px-4 rounded-lg transform rotate-12 z-20 shadow-lg">
+                  <p className="text-sm font-bold">UP TO</p>
+                  <p className="text-2xl font-bold">50% OFF</p>
+                </div>
+                
+                {/* Trust badges */}
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-xl px-6 py-3 z-20 flex gap-4">
+                  <div className="flex items-center">
+                    <div className="mr-2 text-brand-primary">🔒</div>
+                    <div className="text-xs">Secure Payment</div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="mr-2 text-brand-primary">🚚</div>
+                    <div className="text-xs">Free Shipping</div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="mr-2 text-brand-primary">↩️</div>
+                    <div className="text-xs">Easy Returns</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
