@@ -1,0 +1,102 @@
+
+import { Product, User } from '@/types';
+
+export const mockProducts: Product[] = [
+  {
+    id: 'p1',
+    name: 'Wireless Headphones',
+    description: 'Premium noise-cancelling wireless headphones with 30-hour battery life.',
+    price: 249.99,
+    image: '/placeholder.svg',
+    category: 'Electronics',
+    inStock: true,
+    featured: true,
+    rating: 4.8,
+  },
+  {
+    id: 'p2',
+    name: 'Smart Watch',
+    description: 'Health and fitness tracker with heart rate monitoring and GPS.',
+    price: 199.99,
+    image: '/placeholder.svg',
+    category: 'Electronics',
+    inStock: true,
+    featured: true,
+    rating: 4.5,
+  },
+  {
+    id: 'p3',
+    name: 'Wireless Earbuds',
+    description: 'True wireless earbuds with active noise cancellation and sweat resistance.',
+    price: 129.99,
+    image: '/placeholder.svg',
+    category: 'Electronics',
+    inStock: true,
+    rating: 4.6,
+  },
+  {
+    id: 'p4',
+    name: 'Bluetooth Speaker',
+    description: 'Portable waterproof Bluetooth speaker with 360° sound and 24-hour battery life.',
+    price: 79.99,
+    image: '/placeholder.svg',
+    category: 'Electronics',
+    inStock: true,
+    rating: 4.4,
+  },
+  {
+    id: 'p5',
+    name: 'Smartphone',
+    description: 'Latest smartphone with high-resolution camera and all-day battery life.',
+    price: 799.99,
+    image: '/placeholder.svg',
+    category: 'Electronics',
+    inStock: true,
+    featured: true,
+    rating: 4.7,
+  },
+  {
+    id: 'p6',
+    name: 'Laptop',
+    description: 'Ultra-thin laptop with high-performance processor and all-day battery life.',
+    price: 1299.99,
+    image: '/placeholder.svg',
+    category: 'Electronics',
+    inStock: true,
+    rating: 4.9,
+  },
+  {
+    id: 'p7',
+    name: 'Digital Camera',
+    description: 'Professional digital camera with 4K video recording and image stabilization.',
+    price: 699.99,
+    image: '/placeholder.svg',
+    category: 'Electronics',
+    inStock: false,
+    rating: 4.6,
+  },
+  {
+    id: 'p8',
+    name: 'Gaming Console',
+    description: 'Next-generation gaming console with 4K gaming and streaming capabilities.',
+    price: 499.99,
+    image: '/placeholder.svg',
+    category: 'Electronics',
+    inStock: true,
+    rating: 4.8,
+  },
+];
+
+export const mockAdminUser: User = {
+  id: 'admin1',
+  email: 'admin@example.com',
+  name: 'Admin User',
+  role: 'admin',
+};
+
+export const mockCustomerUser: User = {
+  id: 'customer1',
+  email: 'customer@example.com',
+  name: 'Customer User',
+  role: 'customer',
+};
