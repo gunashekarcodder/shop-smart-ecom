@@ -4,6 +4,7 @@ import { useStore } from '@/contexts/StoreContext';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
+import Logo from '@/components/common/Logo';
 
 const CartSummary = () => {
   const { state, checkout } = useStore();
@@ -52,7 +53,10 @@ const CartSummary = () => {
 
   return (
     <div className="bg-gray-50 rounded-lg p-6">
-      <h2 className="text-xl font-bold mb-4">Order Summary</h2>
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-xl font-bold">Order Summary</h2>
+        <Logo size="small" />
+      </div>
       
       <div className="space-y-3 mb-6">
         <div className="flex justify-between">
