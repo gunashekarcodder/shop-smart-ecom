@@ -10,10 +10,18 @@ export interface Product {
   featured?: boolean;
   rating?: number;
   reviews?: Review[];
-  // Add missing properties
   discount?: number;
   reviewCount?: number;
   originalPrice?: number;
+  brand?: string;
+  specifications?: Record<string, string>;
+  images?: string[];
+  tags?: string[];
+  weight?: string;
+  dimensions?: string;
+  warranty?: string;
+  sku?: string;
+  relatedProducts?: string[];
 }
 
 export interface Review {
@@ -35,6 +43,25 @@ export interface User {
   email: string;
   name: string;
   role: 'customer' | 'admin';
+  profilePicture?: string;
+  phoneNumber?: string;
+  addresses?: Address[];
+  wishlist?: string[];
+  orderHistory?: string[];
+}
+
+export interface Address {
+  id: string;
+  type: 'shipping' | 'billing';
+  fullName: string;
+  addressLine1: string;
+  addressLine2?: string;
+  city: string;
+  state: string;
+  postalCode: string;
+  country: string;
+  phoneNumber: string;
+  isDefault: boolean;
 }
 
 export interface Order {
@@ -44,4 +71,24 @@ export interface Order {
   totalAmount: number;
   status: 'processing' | 'shipped' | 'delivered' | 'cancelled';
   createdAt: string;
+  shippingAddress?: Address;
+  billingAddress?: Address;
+  paymentMethod?: string;
+  trackingNumber?: string;
+  estimatedDelivery?: string;
+  discountApplied?: number;
+  couponCode?: string;
+}
+
+export interface Coupon {
+  id: string;
+  code: string;
+  discountType: 'percentage' | 'fixed';
+  discountValue: number;
+  minPurchase?: number;
+  expiryDate: string;
+  usageLimit?: number;
+  usedCount: number;
+  applicableProducts?: string[];
+  applicableCategories?: string[];
 }
