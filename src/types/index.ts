@@ -10,6 +10,10 @@ export interface Product {
   featured?: boolean;
   rating?: number;
   reviews?: Review[];
+  // Add missing properties
+  discount?: number;
+  reviewCount?: number;
+  originalPrice?: number;
 }
 
 export interface Review {
